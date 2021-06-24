@@ -3,5 +3,5 @@ data:
   version: {{ .Values.configMap.data.version }}
 kind: ConfigMap
 metadata:
-  name: nginx
+  name: {{ .Values.namespace.name }}
   namespace: {{ .Values.namespace.name }}

@@ -13,5 +13,5 @@ spec:
       valueFiles:
       - values-staging.yaml
     path: my-solutions/configuration-managers
-    repoURL: https://github.com/suse-cloud-native-foundamentals
+    repoURL: https://github.com/f3rnand0/suse-cloud-native-foundamentals
     targetRevision: HEAD
