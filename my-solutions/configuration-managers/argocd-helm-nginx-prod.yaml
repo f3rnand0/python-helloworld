@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-prod
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values-prod.yaml
+    path: my-solutions/configuration-managers
+    repoURL: https://github.com/f3rnand0/suse-cloud-native-foundamentals
+    targetRevision: HEAD
