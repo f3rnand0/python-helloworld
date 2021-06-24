@@ -8,7 +8,7 @@ image:
 replicaCount: 2
 
 resources:
-  limits:
+  requests:
     memory: "256Mi"
     cpu: "70m"
 
@@ -16,5 +16,4 @@ service:
   port: 80
 
 configMap:
-  data:
-    version: 1.17.0
+  data: "version: 1.17.0"

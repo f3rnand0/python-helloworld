@@ -8,10 +8,9 @@ image:
 replicaCount: 1
 
 resources:
-  limits:
+  requests:
     memory: "128Mi"
     cpu: "50m"
 
 configMap:
-  data:
-    version: 1.18.0
+  data: "version: 1.18.0"

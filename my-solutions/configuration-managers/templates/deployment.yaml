@@ -26,10 +26,6 @@ spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.pullPolicy }}
-        name: nginx
+        name: nginx-alpine
         resources:
-          limits:
-            memory: {{ .Values.resources.limits.memory }}
-            cpu: {{ .Values.resources.limits.cpu }}
-
-
+{{ toYaml .Values.resources | indent 12 }}

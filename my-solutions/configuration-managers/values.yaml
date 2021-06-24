@@ -9,7 +9,7 @@ image:
 replicaCount: 3
 
 resources:
-  limits:
+  requests:
     memory: "256Mi"
     cpu: "50m"
 
@@ -18,5 +18,4 @@ service:
   port: 8111
 
 configMap:
-  data:
-    version: alpine
+  data: "version: alpine"
